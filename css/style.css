@@ -56,6 +56,12 @@ Container Styles
 	margin: auto;
 	position: relative;
 	z-index: 1;
+	height: 100%;
+	padding: 0px;
+	overflow: hidden; 
+	position: relative;
+	z-index: 2;
+	margin: 0px auto;
 }
 
 div#slideshow {
@@ -72,7 +78,7 @@ div#slideshow {
 Slides over-ride - fits height to page
 ========================================================================== */
 
-#slides li {position: relative !important; }
+.item {position: relative !important; }
 
 
 /* =============================================================================

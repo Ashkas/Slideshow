@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$("#slideshow").css("overflow", "hidden");
 	
 	//Create an array of titles
-	var titles = $('#slideshow div.item').find("img").map(function() { return $(this).text(); });
+	var titles = $('#slideshow div.item').find("h1").map(function() { return $(this).text(); });
 	
 	//Add an unordered list to contain the navigation
 	$('#slideshow').before('<ul id="slides"></ul>').cycle({
