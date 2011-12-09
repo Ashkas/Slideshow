@@ -48,6 +48,22 @@ table {
 }
 
 /* =============================================================================
+Link styles
+========================================================================== */
+
+a:link {text-decoration:none; color: #3AAED7; -webkit-transition: all 150ms linear; -moz-transition: all 150ms linear; text-shadow: 0 0 4px rgba(73, 97, 198, 0); padding: 0px 1px;} /* Remember to turn off transition for any links or sliding door technique links where this doesn't work */
+
+a:visited {text-decoration: none; color: #3AAED7;}
+
+a:hover {
+	text-decoration:none;
+	color: #fff;
+	background: #ff0000;
+	text-shadow: 0 0 6px #000;}
+
+a:focus {color: #fff; background: #13671b;} /* For usability, check the homepage style section too */
+
+/* =============================================================================
 Container Styles
 ========================================================================== */
 
@@ -100,3 +116,24 @@ a#next {
 	right:0px;
 		}
 
+/* =============================================================================
+Index Navigation
+========================================================================== */
+
+ul#pager {
+	margin: 0 auto;
+	padding-top: 2em;
+	width: 90%;
+	}
+
+ul#pager li { 
+	margin: 0em 2em 1em;
+	position: relative;
+	z-index: 101;}
+
+ul#pager li img {
+	}
+	
+ul#pager li:last-child {display: none !important;}
+
+li.pager {z-index: 100 !important;}
