@@ -30,9 +30,9 @@ pagerAnchorBuilder: function(idx, slide) {
 		
 	
 pagerAnchorBuilder: function(idx, slide) {
-    return '<li><a href="#"><p>'
+    return '<li><p><a href="#">'
         + jQuery(slide).find('img').attr('src')
-        + '</p></a></li>'; 
+        + '</a></p></li>'; 
 
 
 }
