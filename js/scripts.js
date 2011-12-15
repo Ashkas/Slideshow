@@ -19,22 +19,23 @@ $(document).ready(function() {
 		/* Thumbnail version */
 	
 
+/*
 pagerAnchorBuilder: function(idx, slide) {
-    return '<li style="display: inline-block;width: 120px;height: 120px;overflow: hidden;border: 3px solid #f1f5f6;padding: 4px;"><a href="#"><img src="'
+    return '<li style="display: block;float: left;width: 120px;height: 120px;overflow: hidden;border: 3px solid #f1f5f6;padding: 4px;"><a href="#"><img src="'
         + jQuery(slide).find('img').attr('src')
         + '" width="120" /></a></li>'; 
+*/
 
 
 
 		/* Link version */
 		
-	
-/*
+
 pagerAnchorBuilder: function(idx, slide) {
     return '<li><p><a href="#">'
         + jQuery(slide).find('img').attr('src')
         + '</a></p></li>'; 
-*/
+
 
 
 }
