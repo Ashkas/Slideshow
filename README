@@ -1,0 +1,72 @@
+
+
+Screenshot Slideshow README
+
+*****************************
+
+Contents
+
+1. Image Placement and Insertion
+2. Index Page
+3. IE 7 & 8 Bugs
+
+
+Brief description of how to
+
+1. Image Placement and Insertion
+
+All images that you wish included in the slideshow must be placed in the "image" folder.
+
+The slideshow does not automatically read all images in the "image" folder, rather you need to manually type up each image via both an <img> and <li> tag, within <ul ="slides">.
+
+Here is an example:
+
+<li><img src="images/asics_refreshProduct_FA.png" /></li>
+
+Each line must be customised to link to the images you wish included in the slideshow.
+
+2. Index Page
+
+There are two options for the index page. It can either be a list of links or a page of thumbnail links.
+
+NOTE: The page of thumbnail links only shrinks the images, if there are many links to large images then this will significantly hamper performance.
+
+To switch between the two styles, you must comment in and out the necessary JQuery in js/scripts.js.
+
+To comment out a variation of the pageAnchorBuilder use this mark up:
+
+Before /*
+After */
+
+For example, to comment out the page as text links, it would look like this:
+
+/*
+pagerAnchorBuilder: function(idx, slide) {
+    return '<li><p><a href="#">'
+        + jQuery(slide).find('img').attr('src')
+        + '</a></p></li>';
+*/
+
+The Thumbnail (image) and Text index code is marked in scripts.js. For clarification the code that relates to each style is as follows:
+
+***Thumbnail version***
+
+pagerAnchorBuilder: function(idx, slide) {
+    return '<li style="display: block;float: left;width: 120px;height: 120px;overflow: hidden;border: 3px solid #f1f5f6;padding: 4px;"><a href="#"><img src="'
+        + jQuery(slide).find('img').attr('src')
+        + '" width="120" /></a></li>';
+
+***Text Link Version****
+
+pagerAnchorBuilder: function(idx, slide) {
+    return '<li><p><a href="#">'
+        + jQuery(slide).find('img').attr('src')
+        + '</a></p></li>';
+
+3. IE 7 & 8 Bugs
+
+Just a small note about a bug that affects IE browsers 8 and lower.
+
+The index page is just another <li> item that controls the slideshow. A z-index bug that affects 8 and lower, means that a child tag cannot have a z-index higher than its parent. This means that on the index page you cannot access the links, because the "previous" & "next" layer is in the way.
+
+To work around this problem, the Previous and Next links are placed in a line at the top of the screen for just IE7 & 8.
