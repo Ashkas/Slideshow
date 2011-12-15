@@ -1,0 +1,5 @@
+a#prev, a#next {
+	background-image: url(ie-fix.png);}
+	
+#ie-fix-span {
+	display: none;}
