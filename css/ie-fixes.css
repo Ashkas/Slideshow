@@ -1,12 +1,5 @@
 a#prev, a#next {
-	position: relative;
-	height: 20px;
-	text-align: center;
-	padding: 15px 0px;
-	text-indent: 0px;
-	font-family: Arial, sans-serif;
-	float
-		}		
-
-a#prev:focus, a#next:focus {
-	color: #3AAED7;} 
+	background-image: url(ie-fix.png);}
+	
+#ie-fix-span {
+	display: none;}
