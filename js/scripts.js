@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	$("#slideshow").css("overflow", "hidden");
+	$('#slides').append('<li></li>');
 	
 	//Add an unordered list to contain the navigation
 	//Invoke the cycle plugin on #cycleContainer
